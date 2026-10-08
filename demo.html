@@ -1,0 +1,8 @@
+<!doctype html><meta charset="utf-8"><title>pixel-fjord</title>
+<style>body{margin:0;background:#050b19}canvas{display:block;width:100vw;height:100vh}</style>
+<canvas id="c"></canvas>
+<script type="module">
+import { renderFjord } from './pixel-fjord.js';
+const hour = +(new URLSearchParams(location.search).get('hour') ?? new Date().getHours());
+renderFjord(document.getElementById('c'), { hour, seed: 2026, scale: 4 });
+</script>
